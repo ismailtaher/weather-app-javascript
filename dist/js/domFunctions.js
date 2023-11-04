@@ -139,4 +139,43 @@ const createCurrentConditionsDivs = (weatherObj, unit) => {
     weatherObj.list[0].weather[0].icon,
     weatherObj.list[0].weather[0].description
   );
+  const temp = createElem(
+    "div",
+    "temp",
+    `${math.round(Number(weatherObj.list[0].main.temp))}°`
+  );
+  const properDescription = toProperCase(
+    weatherObj.list[0].weather[0].description
+  );
+  const desc = createElem("div", "desc", properDescription);
+  const feels = createElem(
+    "div",
+    "feels",
+    `Feels Like ${Math.round(Number(weatherObj.list[0].main.feels_like))}°`
+  );
+};
+
+const createMainImageDiv = (icon, altText) => {
+  const iconDiv = createElem("div", "icon");
+  iconDiv.id = "icon";
+  const faIcon = translateIcontoFontAwesome(icon);
+  faIcon.ariaHidden = true;
+  faIcon.title = altText;
+  iconDiv.appendChild(faIcon);
+  return iconDiv;
+};
+
+const createElem = (elemType, divClassName, divText, unit) => {
+  const div = document.createElement(elemType);
+  div.className = divClassName;
+  if (divText) {
+    div.textContent = divText;
+  }
+  if (divClassName === "temp") {
+    const unitDiv = document.createElement("div");
+    unitDiv.classList.add("unit");
+    unitDiv.textContent = unit;
+    div.appendChild(unitDiv);
+  }
+  return div;
 };
