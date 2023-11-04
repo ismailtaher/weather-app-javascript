@@ -159,5 +159,5 @@ const updateDataAndDisplay = async (locationObj) => {
   console.log(locationObj);
   const weatherJson = await getWeatherFromCoords(locationObj);
   console.log(weatherJson);
-  /*  if (weatherJson) updateDisplay(weatherJson, locationObj); */
+  if (weatherJson) updateDisplay(weatherJson, locationObj);
 };
