@@ -115,7 +115,7 @@ const saveLocation = () => {
 };
 
 const setUnitPref = () => {
-  const unitIcon = document.querySelector(".fa-chart-bat");
+  const unitIcon = document.querySelector(".fa-chart-bar");
   addSpinner(unitIcon);
   currentLoc.toggleUnit();
   updateDataAndDisplay(currentLoc);
