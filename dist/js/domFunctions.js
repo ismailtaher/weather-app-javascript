@@ -153,6 +153,27 @@ const createCurrentConditionsDivs = (weatherObj, unit) => {
     "feels",
     `Feels Like ${Math.round(Number(weatherObj.list[0].main.feels_like))}°`
   );
+  const maxTemp = createElem(
+    "div",
+    "maxtemp",
+    `High ${Math.round(Number(weatherObj.list[0].main.temp_max))}°`
+  );
+  const minTemp = createElem(
+    "div",
+    "mintemp",
+    `Low ${Math.round(Number(weatherObj.list[0].main.temp_min))}°`
+  );
+  const humidity = createElem(
+    "div",
+    "humidity",
+    `Humidity ${weatherObj.list[0].main.humidity}%`
+  );
+  const wind = createElem(
+    "div",
+    "wind",
+    `Wind ${Math.round(Number(weatherObj.list[0].wind.speed))} ${windUnit}`
+  );
+  return [icon, temp, desc, feels, maxTemp, minTemp, humidity, wind];
 };
 
 const createMainImageDiv = (icon, altText) => {
@@ -178,4 +199,54 @@ const createElem = (elemType, divClassName, divText, unit) => {
     div.appendChild(unitDiv);
   }
   return div;
+};
+
+const translateIcontoFontAwesome = (icon) => {
+  const i = document.createElement("i");
+  const firstTwoChars = icon.slice(0, 2);
+  const lastChar = icon.slice(2);
+  switch (firstTwoChars) {
+    case "01":
+      if (lastChar === "d") {
+        i.classList.add("far", "fa-sun");
+      } else {
+        i.classList.add("far, fa-moon");
+      }
+      break;
+    case "02":
+      if (lastChar === "d") {
+        i.classList.add("fas", "fa-cloud-sun");
+      } else {
+        i.classList.add("far, fa-cloud-moon");
+      }
+      break;
+    case "03":
+      i.classList.add("fas", "fa-cloud");
+      break;
+    case "04":
+      i.classList.add("fas", "fa-cloud-meatball");
+      break;
+    case "09":
+      i.classList.add("fas", "fa-cloud-rain");
+      break;
+    case "10":
+      if (lastChar === "d") {
+        i.classList.add("fas", "fa-cloud-sun-rain");
+      } else {
+        i.classList.add("far, fa-cloud-moon-rain");
+      }
+      break;
+    case "11":
+      i.classList.add("fas", "fa-poo-storm");
+      break;
+    case "13":
+      i.classList.add("fas", "fa-snowflake");
+      break;
+    case "50":
+      i.classList.add("fas", "fa-smog");
+      break;
+    default:
+      i.classList.add("far", "fa-question-circle");
+  }
+  return i;
 };
