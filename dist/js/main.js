@@ -11,6 +11,7 @@ import {
   displayError,
   displayApiError,
   updateScreenReaderConfirmation,
+  updateDisplay,
 } from "./domFunctions.js";
 import CurrentLocation from "./CurrentLocation.js";
 const currentLoc = new CurrentLocation();
