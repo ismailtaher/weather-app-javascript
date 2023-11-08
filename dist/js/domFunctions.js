@@ -228,14 +228,14 @@ const translateIcontoFontAwesome = (icon) => {
       if (lastChar === "d") {
         i.classList.add("far", "fa-sun");
       } else {
-        i.classList.add("far, fa-moon");
+        i.classList.add("far", "fa-moon");
       }
       break;
     case "02":
       if (lastChar === "d") {
         i.classList.add("fas", "fa-cloud-sun");
       } else {
-        i.classList.add("far, fa-cloud-moon");
+        i.classList.add("far", "fa-cloud-moon");
       }
       break;
     case "03":
