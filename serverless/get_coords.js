@@ -1,5 +1,4 @@
 const fetch = require("node_fetch");
-const { json } = require("stream/consumers");
 
 const { WEATHER_API_KEY } = process.env;
 
