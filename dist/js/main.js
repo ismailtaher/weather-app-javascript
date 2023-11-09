@@ -157,8 +157,16 @@ const submitNewLocation = async (event) => {
 };
 
 const updateDataAndDisplay = async (locationObj) => {
-  console.log(locationObj);
-  const weatherJson = await getWeatherFromCoords(locationObj);
-  console.log(weatherJson);
-  if (weatherJson) updateDisplay(weatherJson, locationObj);
+  try {
+    const weatherJson = await getWeatherFromCoords(locationObj);
+    if (weatherJson) {
+      updateDisplay(weatherJson, locationObj);
+    } else {
+      console.error("Invalid weather data received");
+      // Handle the error gracefully, e.g., display an error message to the user.
+    }
+  } catch (error) {
+    console.error("Error parsing JSON data:", error);
+    // Handle the JSON parsing error, e.g., display an error message to the user.
+  }
 };
