@@ -385,12 +385,12 @@ hr {
 
 .rain {
   background-color: rgba(94, 94, 255, 0.5);
-  background-image: url("img/rain.jpg");
+  background-image: url("/img/rain.jpg");
 }
 
 .snow {
   background-color: rgba(94, 94, 255, 0.5);
-  background-image: url("img/snow.jpg");
+  background-image: url("/img/snow.jpg");
 }
 
 .night {
@@ -400,10 +400,10 @@ hr {
 
 .fog {
   background-color: darkslategray;
-  background-image: url("img/fog.jpg");
+  background-image: url("/img/fog.jpg");
 }
 
 .clouds {
   background-color: rgba(94, 94, 255, 0.5);
-  background-image: url("img/clouds.jpg");
+  background-image: url("/img/clouds.jpg");
 }/*# sourceMappingURL=main.css.map */
