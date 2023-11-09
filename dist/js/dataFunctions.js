@@ -35,10 +35,22 @@ export const getWeatherFromCoords = async (locationObj) => {
       method: "POST",
       body: JSON.stringify(urlDataObject),
     });
-    const weatherJson = await weatherStream.json();
-    return weatherJson;
+
+    if (weatherStream.ok) {
+      const weatherJson = await weatherStream.json();
+      if (weatherJson) {
+        return weatherJson;
+      } else {
+        console.error("Invalid weather data received");
+        // Handle the error gracefully, e.g., display an error message to the user.
+      }
+    } else {
+      console.error("HTTP error:", weatherStream.status);
+      // Handle the HTTP error, e.g., display an error message to the user.
+    }
   } catch (err) {
-    console.error(err);
+    console.error("Error fetching weather data:", err);
+    // Handle the error, e.g., display an error message to the user.
   }
 };
 
