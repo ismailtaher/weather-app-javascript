@@ -148,6 +148,7 @@ const submitNewLocation = async (event) => {
       };
       setLocationObject(currentLoc, myCoordObj);
       updateDataAndDisplay(currentLoc);
+      console.log(coordsData);
     } else {
       displayApiError(coordsData);
     }

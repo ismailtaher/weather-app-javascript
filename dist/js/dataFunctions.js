@@ -80,7 +80,6 @@ export const getCoordsFromApi = async (entryText, units) => {
     });
     const jsonData = await dataStream.json();
     return jsonData;
-    console.log(jsonData);
   } catch (err) {
     console.error(err);
   }
