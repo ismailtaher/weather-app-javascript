@@ -1,5 +1,3 @@
-# weather-app-javascript
-
 # Responsive Weather App
 
 ![Screenshot 2023-11-10 at 5 39 26 PM](https://github.com/ismailtaher/weather-app-javascript/assets/57496063/11294001-7964-4cd5-8921-15d5f48952d6)
