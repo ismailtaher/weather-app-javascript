@@ -160,7 +160,8 @@ const createCurrentConditionsDivs = (weatherObj, unit) => {
   const temp = createElem(
     "div",
     "temp",
-    `${Math.round(Number(weatherObj.list[0].main.temp))}°`
+    `${Math.round(Number(weatherObj.list[0].main.temp))}°`,
+    tempUnit
   );
   const properDescription = toProperCase(
     weatherObj.list[0].weather[0].description
