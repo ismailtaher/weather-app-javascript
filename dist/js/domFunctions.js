@@ -151,7 +151,7 @@ const setFocusOnSearch = () => {
 };
 
 const createCurrentConditionsDivs = (weatherObj, unit) => {
-  const tempUnit = unit === "metric" ? "Celcius" : "Fahrenheit";
+  const tempUnit = unit === "metric" ? "C" : "F";
   const windUnit = unit === "metric" ? "m/s" : "mph";
   const icon = createMainImageDiv(
     weatherObj.list[0].weather[0].icon,
