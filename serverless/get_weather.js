@@ -9,7 +9,6 @@ exports.handler = async (event, context) => {
   try {
     const weatherStream = await fetch(url);
     const weatherJson = await weatherStream.json();
-    console.log(weatherJson);
     return {
       statusCode: 200,
       body: JSON.stringify(weatherJson),
