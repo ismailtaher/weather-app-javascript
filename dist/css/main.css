@@ -218,8 +218,8 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-row: 1/span 3;
-  grid-column: 1/span 2;
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 2;
   font-size: 6rem;
   letter-spacing: 0;
   text-shadow: 1px 0 5px #000;
@@ -237,7 +237,7 @@ hr {
 }
 .currentForecast .currentForecast__conditions .temp .unit {
   font-size: 1.65rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(255, 255, 255);
   text-shadow: none;
   position: absolute;
   top: 55%;
@@ -252,8 +252,8 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-row: 1/span 1;
-  grid-column: 3/span 2;
+  grid-row: 1 / span 1;
+  grid-column: 3 / span 2;
 }
 .currentForecast .currentForecast__conditions .icon i {
   font-size: 3rem;
@@ -268,24 +268,24 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-row: 2/span 1;
-  grid-column: 3/span 2;
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 2;
 }
 .currentForecast .currentForecast__conditions .mintemp {
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: flex-start;
-  grid-row: 3/span 1;
-  grid-column: 3/span 2;
+  grid-row: 3 / span 1;
+  grid-column: 3 / span 2;
   color: rgba(255, 255, 255, 0.6);
 }
 .currentForecast .currentForecast__conditions .desc {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-row: 4/span 1;
-  grid-column: 1/span 4;
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 4;
 }
 @media only screen and (max-width: 1024px) and (min-height: 650px) {
   .currentForecast .currentForecast__conditions .desc {
@@ -301,15 +301,15 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-row: 5/span 1;
-  grid-column: 1/span 4;
+  grid-row: 5 / span 1;
+  grid-column: 1 / span 4;
   padding-top: 0.5rem;
   font-weight: normal;
 }
 .currentForecast .currentForecast__conditions .humidity {
   display: none;
-  grid-row: 6/span 1;
-  grid-column: 1/span 4;
+  grid-row: 6 / span 1;
+  grid-column: 1 / span 4;
   padding-top: 0.5rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.6);
@@ -330,8 +330,8 @@ hr {
 }
 .currentForecast .currentForecast__conditions .wind {
   display: none;
-  grid-row: 7/span 1;
-  grid-column: 1/span 4;
+  grid-row: 7 / span 1;
+  grid-column: 1 / span 4;
   padding-top: 0.5rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.6);
@@ -406,4 +406,4 @@ hr {
 .clouds {
   background-color: rgba(94, 94, 255, 0.5);
   background-image: url("../img/clouds.jpg");
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
